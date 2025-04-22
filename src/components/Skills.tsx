@@ -1,37 +1,44 @@
-import { motion } from 'framer-motion';
-import { Code2, Layout, Palette, Sparkles, Terminal, Wand2 } from 'lucide-react';
+import { motion } from "framer-motion";
+import {
+  Code2,
+  Database,
+  Layout,
+  Server,
+  Terminal,
+  Wrench,
+} from "lucide-react";
 
 const skills = [
   {
     icon: Code2,
-    title: "Core Technologies",
-    skills: ["HTML5", "CSS3", "JavaScript", "TypeScript"]
-  },
-  {
-    icon: Sparkles,
-    title: "Frontend Frameworks",
-    skills: ["React", "Next.js", "Vue", "Remix"]
-  },
-  {
-    icon: Palette,
-    title: "Styling",
-    skills: ["Tailwind CSS", "Sass", "CSS-in-JS", "Framer Motion"]
+    title: "Core Languages",
+    skills: ["TypeScript", "JavaScript", "C#", "SQL", "Python", "HTML", "CSS"],
   },
   {
     icon: Layout,
-    title: "UI Development",
-    skills: ["Responsive Design", "CSS Grid", "Flexbox", "Animations"]
+    title: "Frontend Technologies",
+    skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "Storybook"],
+  },
+  {
+    icon: Server,
+    title: "Backend & APIs",
+    skills: ["Node.js", "Express", "Prisma", "Drizzle", "REST APIs", ".NET"],
+  },
+  {
+    icon: Database,
+    title: "Databases",
+    skills: ["MySQL", "MongoDB", "Supabase", "SQL Server"],
   },
   {
     icon: Terminal,
     title: "Development Tools",
-    skills: ["Git", "Vite", "webpack", "npm/yarn"]
+    skills: ["Git", "GitHub", "Bitbucket", "Vercel", "VS Code"],
   },
   {
-    icon: Wand2,
-    title: "Best Practices",
-    skills: ["Performance", "Accessibility", "SEO", "Clean Code"]
-  }
+    icon: Wrench,
+    title: "Other Tools",
+    skills: ["MySQL Workbench", "Figma", "Postman", "CI/CD", "Agile"],
+  },
 ];
 
 export default function Skills() {
@@ -57,9 +64,11 @@ export default function Skills() {
               className="bg-white/10 backdrop-blur-lg rounded-lg p-6 hover:bg-white/20 transition-colors duration-300"
             >
               <skill.icon className="w-12 h-12 text-violet-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-4">{skill.title}</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">
+                {skill.title}
+              </h3>
               <div className="flex flex-wrap gap-2">
-                {skill.skills.map(item => (
+                {skill.skills.map((item) => (
                   <span
                     key={item}
                     className="px-3 py-1 text-sm bg-violet-500/20 text-violet-300 rounded-full"

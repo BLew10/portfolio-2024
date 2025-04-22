@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Terminal } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Github, Instagram, Linkedin, Mail, Terminal } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -15,7 +15,7 @@ export default function Hero() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
           className="absolute inset-0 flex items-center justify-center"
         >
@@ -36,42 +36,42 @@ export default function Hero() {
             transition={{
               duration: 0.8,
               type: "spring",
-              stiffness: 100
+              stiffness: 100,
             }}
-            className="relative w-48 h-48 mx-auto mb-8"
+            className="relative w-64 h-64 md:w-80 md:h-80 mx-auto mb-8"
           >
             <motion.div
               animate={{
                 rotate: 360,
-                scale: [1, 1.05, 1]
+                scale: [1, 1.05, 1],
               }}
               transition={{
                 rotate: {
                   duration: 8,
                   repeat: Infinity,
-                  ease: "linear"
+                  ease: "linear",
                 },
                 scale: {
                   duration: 2,
                   repeat: Infinity,
-                  ease: "easeInOut"
-                }
+                  ease: "easeInOut",
+                },
               }}
               className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 blur-md opacity-75"
             />
             <motion.div
               animate={{
-                y: [-5, 5, -5]
+                y: [-5, 5, -5],
               }}
               transition={{
                 duration: 2.5,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
               className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 shadow-2xl"
             >
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000"
+                src="/images/kylieAndI.png"
                 alt="Brandon Lewis"
                 className="w-full h-full object-cover"
               />
@@ -92,7 +92,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-300 mb-8"
           >
-            Front-End Developer
+            Frontend Developer
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -101,8 +101,12 @@ export default function Hero() {
             className="flex justify-center space-x-6"
           >
             {[
-              { Icon: Github, href: "https://github.com" },
-              { Icon: Linkedin, href: "https://www.linkedin.com/in/brandon-lewis-88974811b/" },
+              { Icon: Github, href: "https://github.com/BLew10" },
+              {
+                Icon: Linkedin,
+                href: "https://www.linkedin.com/in/brandon-lewis-88974811b/",
+              },
+              { Icon: Instagram, href: "https://www.instagram.com/bleww10/" },
               { Icon: Mail, href: "mailto:brandonlewis.10@gmail.com" },
             ].map(({ Icon, href }, index) => (
               <motion.a
